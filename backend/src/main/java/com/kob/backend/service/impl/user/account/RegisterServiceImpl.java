@@ -24,7 +24,7 @@ public class RegisterServiceImpl implements RegisterService {
     public Map<String, String> register(String username, String password, String confirmedPassword) {
         Map<String, String> map = new HashMap<>();
         if(username == null){
-            map.put("error_message", "用户名不能为空");
+            map.put("error_message", "用户名不能为空");//不能正常显示
             return map;
         }
         if(password == null || confirmedPassword == null) {
@@ -33,7 +33,7 @@ public class RegisterServiceImpl implements RegisterService {
         }
         username = username.trim();
         if(username.length() == 0){
-            map.put("error_mesage", "密码不能为空");
+            map.put("error_message", "密码不能为空");
             return map;
         }
 
