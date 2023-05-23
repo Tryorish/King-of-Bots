@@ -167,7 +167,7 @@ public class Game extends Thread{
     }
     private void saveToDatabase() {
         Integer ratingA = WebSocketServer.userMapper.selectById(playerA.getId()).getRating();
-        Integer ratingB = WebSocketServer.userMapper.selectById(playerA.getId()).getRating();
+        Integer ratingB = WebSocketServer.userMapper.selectById(playerB.getId()).getRating();
 
         if("A".equals(loser)) {
             ratingA -= 2;
